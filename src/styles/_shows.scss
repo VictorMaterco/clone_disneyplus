@@ -1,0 +1,55 @@
+//imports
+@use 'variaveis';
+
+
+//estilização da secção de atrações
+.shows {
+    padding: 2vw 5.6vw;
+
+    //estilização das abas
+    &__list{
+        margin-top: 44px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        //alterando o display da aba ativa
+        &--is-active {
+            display: grid;
+        }
+
+        //estilização dos itens da aba
+        &__item {
+
+            //estilização da imagem
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    //estilização do navegador
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        //estilização do butão do navegador
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+
+            //estilização do botão ativo
+            &--is-active {
+                border-color: variaveis.$corTextoSecundario;
+            }
+        }
+    }
+}

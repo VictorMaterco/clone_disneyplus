@@ -1,13 +1,17 @@
-//import
+//imports
 @use 'hero';
 @use 'variaveis';
+@use 'shows';
 
+//imports fonts
+//config font regular
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Regular.woff2);
     font-weight: 400;
 }
 
+//config font bold
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Bold.woff2);
@@ -19,20 +23,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: variaveis.$corDeFundo;
     font-family: Avenir, sans-serif;
 }
 
+//estilização do body
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
 //mixins
+//mixin fontes de textos
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
 
+//mixin fontes de titulos
 @mixin title($fontSize: 40px){
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
@@ -57,6 +64,7 @@ body {
     text-decoration: underline;
 }
 
+//configs titulos
 .title--big {
     @include title(44px);
 }
