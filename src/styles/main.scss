@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'variaveis';
 @use 'shows';
+@use 'plans';
 
 //imports fonts
 //config font regular
@@ -75,4 +76,18 @@ body {
 
 .title--small {
     @include title(28px);
+}
+
+//estilização do butão
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
 }
